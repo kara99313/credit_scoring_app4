@@ -1,0 +1,39 @@
+
+RAPPORT D'ENTRAÎNEMENT - MODÈLE DE CREDIT SCORING
+=================================================
+
+Date: 2025-06-20 01:19:35
+Modèle: models\credit_scoring_model_20250620_011935_auc0.8060.pkl
+
+PARAMÈTRES OPTIMAUX:
+--------------------
+C: 1.0
+class_weight: balanced
+max_iter: 1000
+penalty: l2
+solver: liblinear
+
+MÉTRIQUES DE PERFORMANCE:
+-------------------------
+AUC-ROC: 0.8060
+Accuracy: 0.7200
+Precision: 0.5222
+Recall: 0.7833
+F1-Score: 0.6267
+Specificity: 0.6929
+Sensitivity: 0.7833
+
+MÉTRIQUES MÉTIER:
+-----------------
+KS Statistic: 0.5024
+Gini Coefficient: 0.6119
+
+INTERPRÉTATION:
+---------------
+- AUC-ROC > 0.7: Modèle acceptable
+- AUC-ROC > 0.8: Bon modèle
+- AUC-ROC > 0.9: Excellent modèle
+- KS > 0.3: Pouvoir discriminant acceptable
+- Gini > 0.4: Pouvoir prédictif acceptable
+
+STATUS: ✅ MODÈLE ACCEPTABLE

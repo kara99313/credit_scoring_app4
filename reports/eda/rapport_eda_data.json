@@ -1,0 +1,291 @@
+{
+  "univariate": {
+    "numeric_summary": {
+      "duree": {
+        "count": 1000,
+        "mean": 20.31,
+        "std": 10.62,
+        "min": 4.0,
+        "max": 42.0,
+        "median": 18.0
+      },
+      "montant": {
+        "count": 1000,
+        "mean": 3046.52,
+        "std": 2182.83,
+        "min": 250.0,
+        "max": 7870.5,
+        "median": 2319.0
+      },
+      "age": {
+        "count": 1000,
+        "mean": 35.43,
+        "std": 11.08,
+        "min": 19.0,
+        "max": 64.5,
+        "median": 33.0
+      }
+    },
+    "categorical_summary": {
+      "historique": {
+        "unique_values": 5,
+        "most_frequent": "credits deja rembourses jusqu'a maintenant",
+        "most_frequent_count": 530,
+        "most_frequent_pct": 53.0
+      },
+      "objet": {
+        "unique_values": 10,
+        "most_frequent": "appareils menagers",
+        "most_frequent_count": 280,
+        "most_frequent_pct": 28.0
+      },
+      "epargne": {
+        "unique_values": 5,
+        "most_frequent": "inferieur a 100",
+        "most_frequent_count": 603,
+        "most_frequent_pct": 60.3
+      },
+      "anciennete_emploi": {
+        "unique_values": 5,
+        "most_frequent": "compris entre 1 et 4 ans",
+        "most_frequent_count": 339,
+        "most_frequent_pct": 33.9
+      },
+      "taux_endettement": {
+        "unique_values": 4,
+        "most_frequent": "superieur a 35%",
+        "most_frequent_count": 476,
+        "most_frequent_pct": 47.6
+      },
+      "statut": {
+        "unique_values": 4,
+        "most_frequent": "celibataire",
+        "most_frequent_count": 548,
+        "most_frequent_pct": 54.8
+      }
+    },
+    "interpretations": {
+      "duree": "Crédits à moyen terme (moyenne 20 mois)",
+      "montant": "Montants de crédit moyens (moyenne 3047€)",
+      "age": "Population d'âge moyen (moyenne 35 ans)",
+      "historique": "Modalité dominante: 'credits deja rembourses jusqu'a maintenant' (53.0%)",
+      "objet": "Modalité dominante: 'appareils menagers' (28.0%)",
+      "epargne": "Modalité dominante: 'inferieur a 100' (60.3%)",
+      "anciennete_emploi": "Modalité dominante: 'compris entre 1 et 4 ans' (33.9%)",
+      "taux_endettement": "Modalité dominante: 'superieur a 35%' (47.6%)",
+      "statut": "Modalité dominante: 'celibataire' (54.8%)"
+    }
+  },
+  "target_analysis": {
+    "distribution": {
+      "credit bien rembourse": 700,
+      "credit avec impaye": 300
+    },
+    "percentages": {
+      "credit bien rembourse": 70.0,
+      "credit avec impaye": 30.0
+    },
+    "total_count": 1000,
+    "interpretation": "Dataset équilibré : 70.0% de bons payeurs"
+  },
+  "bivariate": {
+    "numeric_vs_target": {
+      "duree": {
+        "mean": {
+          "credit avec impaye": 23.76,
+          "credit bien rembourse": 18.83
+        },
+        "median": {
+          "credit avec impaye": 24.0,
+          "credit bien rembourse": 18.0
+        },
+        "std": {
+          "credit avec impaye": 11.13,
+          "credit bien rembourse": 10.04
+        }
+      },
+      "montant": {
+        "mean": {
+          "credit avec impaye": 3466.03,
+          "credit bien rembourse": 2866.72
+        },
+        "median": {
+          "credit avec impaye": 2554.0,
+          "credit bien rembourse": 2248.0
+        },
+        "std": {
+          "credit avec impaye": 2475.2,
+          "credit bien rembourse": 2020.17
+        }
+      },
+      "age": {
+        "mean": {
+          "credit avec impaye": 33.81,
+          "credit bien rembourse": 36.12
+        },
+        "median": {
+          "credit avec impaye": 31.0,
+          "credit bien rembourse": 34.0
+        },
+        "std": {
+          "credit avec impaye": 10.92,
+          "credit bien rembourse": 11.08
+        }
+      }
+    },
+    "categorical_vs_target": {
+      "historique": {
+        "credit avec impaye": {
+          "aucun credit pris /tous les credits ont ete rembourses": 62.5,
+          "compte critique /autres credits existants (pas dans cette banque)": 17.1,
+          "credits deja rembourses jusqu'a maintenant": 31.9,
+          "retard dans le paiement dans le passe": 31.8,
+          "tous les credits de cette banque ont ete rembourses": 57.1
+        },
+        "credit bien rembourse": {
+          "aucun credit pris /tous les credits ont ete rembourses": 37.5,
+          "compte critique /autres credits existants (pas dans cette banque)": 82.9,
+          "credits deja rembourses jusqu'a maintenant": 68.1,
+          "retard dans le paiement dans le passe": 68.2,
+          "tous les credits de cette banque ont ete rembourses": 42.9
+        }
+      },
+      "objet": {
+        "credit avec impaye": {
+          "appareils menagers": 22.1,
+          "business": 35.1,
+          "education": 36.4,
+          "formation": 11.1,
+          "mobilier / equipement": 41.7,
+          "radio / television": 32.0,
+          "reparations": 33.3,
+          "vacances": 44.0,
+          "voiture (nouveau)": 38.0,
+          "voiture (utilise)": 16.5
+        },
+        "credit bien rembourse": {
+          "appareils menagers": 77.9,
+          "business": 64.9,
+          "education": 63.6,
+          "formation": 88.9,
+          "mobilier / equipement": 58.3,
+          "radio / television": 68.0,
+          "reparations": 66.7,
+          "vacances": 56.0,
+          "voiture (nouveau)": 62.0,
+          "voiture (utilise)": 83.5
+        }
+      },
+      "statut": {
+        "credit avec impaye": {
+          "celibataire": 26.6,
+          "femme:divorcee/separee/mariee": 35.2,
+          "homme: marie/veuf": 27.2,
+          "homme:divorce/separe": 40.0
+        },
+        "credit bien rembourse": {
+          "celibataire": 73.4,
+          "femme:divorcee/separee/mariee": 64.8,
+          "homme: marie/veuf": 72.8,
+          "homme:divorce/separe": 60.0
+        }
+      },
+      "emploi": {
+        "credit avec impaye": {
+          "cadres": 34.5,
+          "employe qualifie / fonctionnaire": 29.5,
+          "non qualifie": 28.0,
+          "sans emploi": 31.8
+        },
+        "credit bien rembourse": {
+          "cadres": 65.5,
+          "employe qualifie / fonctionnaire": 70.5,
+          "non qualifie": 72.0,
+          "sans emploi": 68.2
+        }
+      }
+    },
+    "interpretations": {
+      "duree_vs_target": "Forte différence entre groupes (23% d'écart) - Variable discriminante",
+      "montant_vs_target": "Différence modérée entre groupes (19% d'écart)",
+      "age_vs_target": "Faible différence entre groupes (7% d'écart)",
+      "historique_vs_target": "Forte association avec la cible (écart moyen 36%)",
+      "objet_vs_target": "Forte association avec la cible (écart moyen 38%)",
+      "statut_vs_target": "Forte association avec la cible (écart moyen 36%)",
+      "emploi_vs_target": "Forte association avec la cible (écart moyen 38%)"
+    }
+  },
+  "correlation": {
+    "matrix": {
+      "duree": {
+        "duree": 1.0,
+        "montant": 0.639,
+        "age": -0.04
+      },
+      "montant": {
+        "duree": 0.639,
+        "montant": 1.0,
+        "age": 0.023
+      },
+      "age": {
+        "duree": -0.04,
+        "montant": 0.023,
+        "age": 1.0
+      }
+    },
+    "high_correlations": [
+      {
+        "var1": "duree",
+        "var2": "montant",
+        "correlation": 0.639
+      }
+    ],
+    "interpretations": {
+      "duree_vs_montant": "Corrélation 0.639 entre duree et montant"
+    }
+  },
+  "statistical_tests": {
+    "chi2_tests": {
+      "historique": {
+        "chi2": 61.691,
+        "p_value": 0.0,
+        "significant": "True"
+      },
+      "objet": {
+        "chi2": 33.356,
+        "p_value": 0.000116,
+        "significant": "True"
+      },
+      "statut": {
+        "chi2": 9.605,
+        "p_value": 0.022238,
+        "significant": "True"
+      }
+    },
+    "ttest_results": {
+      "duree": {
+        "t_statistic": -6.889,
+        "p_value": 0.0,
+        "significant": "True"
+      },
+      "montant": {
+        "t_statistic": -4.009,
+        "p_value": 6.6e-05,
+        "significant": "True"
+      },
+      "age": {
+        "t_statistic": 3.042,
+        "p_value": 0.00241,
+        "significant": "True"
+      }
+    },
+    "interpretations": {
+      "chi2_historique": "Association SIGNIFICATIVE avec la cible (p=0.0000)",
+      "chi2_objet": "Association SIGNIFICATIVE avec la cible (p=0.0001)",
+      "chi2_statut": "Association SIGNIFICATIVE avec la cible (p=0.0222)",
+      "ttest_duree": "Différence SIGNIFICATIVE entre groupes (p=0.0000)",
+      "ttest_montant": "Différence SIGNIFICATIVE entre groupes (p=0.0001)",
+      "ttest_age": "Différence SIGNIFICATIVE entre groupes (p=0.0024)"
+    }
+  }
+}

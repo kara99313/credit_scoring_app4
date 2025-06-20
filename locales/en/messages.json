@@ -1,0 +1,123 @@
+{
+  "app": {
+    "title": "Credit Scoring System",
+    "subtitle": "AI-powered credit risk assessment",
+    "description": "Complete credit analysis and scoring platform using advanced machine learning techniques"
+  },
+  "navigation": {
+    "home": "Home",
+    "prediction": "Prediction",
+    "batch_scoring": "Batch Scoring",
+    "analytics": "Analytics",
+    "model_info": "Model Info",
+    "settings": "Settings",
+    "help": "Help"
+  },
+  "data_processing": {
+    "title": "Data Processing",
+    "loading": "Data Loading",
+    "cleaning": "Data Cleaning",
+    "validation": "Data Validation",
+    "eda": "Exploratory Analysis",
+    "feature_engineering": "Feature Engineering",
+    "transformation": "Variable Transformation",
+    "splitting": "Data Splitting"
+  },
+  "form": {
+    "personal_info": "Personal Information",
+    "age": "Age",
+    "gender": "Gender",
+    "marital_status": "Marital Status",
+    "education": "Education Level",
+    "employment": "Employment",
+    "financial_info": "Financial Information",
+    "income": "Monthly Income",
+    "expenses": "Monthly Expenses",
+    "debt": "Existing Debt",
+    "credit_history": "Credit History",
+    "credit_score": "Credit Score",
+    "payment_history": "Payment History",
+    "credit_utilization": "Credit Utilization",
+    "loan_info": "Loan Information",
+    "amount": "Requested Amount",
+    "purpose": "Loan Purpose",
+    "term": "Loan Term"
+  },
+  "results": {
+    "title": "Assessment Results",
+    "probability": "Default Probability",
+    "score": "Credit Score",
+    "risk_class": "Risk Class",
+    "decision": "Decision",
+    "recommendation": "Recommendation",
+    "factors": "Contributing Factors",
+    "explanation": "Detailed Explanation"
+  },
+  "risk_classes": {
+    "very_low": "Very Low",
+    "low": "Low", 
+    "medium": "Medium",
+    "high": "High",
+    "very_high": "Very High"
+  },
+  "decisions": {
+    "approved": "Approved",
+    "rejected": "Rejected",
+    "review": "Under Review",
+    "conditional": "Conditional"
+  },
+  "messages": {
+    "loading": "Loading...",
+    "processing": "Processing...",
+    "success": "Operation successful",
+    "error": "An error occurred",
+    "invalid_input": "Invalid input data",
+    "model_not_loaded": "Model not loaded",
+    "prediction_failed": "Prediction failed"
+  },
+  "validation": {
+    "required": "This field is required",
+    "invalid_age": "Invalid age (18-80 years)",
+    "invalid_income": "Invalid income",
+    "invalid_amount": "Invalid amount",
+    "out_of_range": "Value out of range"
+  },
+  "reports": {
+    "title": "Credit Assessment Report",
+    "executive_summary": "Executive Summary",
+    "detailed_analysis": "Detailed Analysis",
+    "technical_justification": "Technical Justification",
+    "business_recommendations": "Business Recommendations",
+    "risk_assessment": "Risk Assessment",
+    "model_explanation": "Model Explanation"
+  },
+  "analytics": {
+    "performance": "Model Performance",
+    "drift_detection": "Drift Detection",
+    "feature_importance": "Feature Importance",
+    "model_metrics": "Model Metrics",
+    "data_quality": "Data Quality",
+    "monitoring": "Monitoring"
+  },
+  "ml_workflow": {
+    "data_loading": "Data Loading",
+    "data_cleaning": "Data Cleaning",
+    "eda": "Exploratory Data Analysis",
+    "feature_engineering": "Feature Engineering",
+    "feature_transformation": "Feature Transformation",
+    "model_training": "Model Training",
+    "model_evaluation": "Model Evaluation",
+    "model_deployment": "Model Deployment"
+  },
+  "buttons": {
+    "submit": "Submit",
+    "reset": "Reset",
+    "calculate": "Calculate",
+    "export": "Export",
+    "download": "Download",
+    "save": "Save",
+    "load": "Load",
+    "train": "Train",
+    "predict": "Predict"
+  }
+} 

@@ -1,0 +1,123 @@
+{
+  "app": {
+    "title": "Système de Credit Scoring",
+    "subtitle": "Évaluation du risque de crédit par intelligence artificielle",
+    "description": "Plateforme complète d'analyse et de scoring de crédit utilisant des techniques de machine learning avancées"
+  },
+  "navigation": {
+    "home": "Accueil",
+    "prediction": "Prédiction",
+    "batch_scoring": "Scoring en lot",
+    "analytics": "Analytique",
+    "model_info": "Informations du modèle",
+    "settings": "Paramètres",
+    "help": "Aide"
+  },
+  "data_processing": {
+    "title": "Traitement des Données",
+    "loading": "Chargement des données",
+    "cleaning": "Nettoyage des données",
+    "validation": "Validation des données",
+    "eda": "Analyse exploratoire",
+    "feature_engineering": "Ingénierie des caractéristiques",
+    "transformation": "Transformation des variables",
+    "splitting": "Division des données"
+  },
+  "form": {
+    "personal_info": "Informations personnelles",
+    "age": "Âge",
+    "gender": "Genre",
+    "marital_status": "Statut matrimonial",
+    "education": "Niveau d'éducation",
+    "employment": "Emploi",
+    "financial_info": "Informations financières",
+    "income": "Revenus mensuels",
+    "expenses": "Dépenses mensuelles",
+    "debt": "Dettes existantes",
+    "credit_history": "Historique de crédit",
+    "credit_score": "Score de crédit",
+    "payment_history": "Historique de paiement",
+    "credit_utilization": "Utilisation du crédit",
+    "loan_info": "Informations sur le prêt",
+    "amount": "Montant demandé",
+    "purpose": "Objectif du prêt",
+    "term": "Durée du prêt"
+  },
+  "results": {
+    "title": "Résultats de l'évaluation",
+    "probability": "Probabilité de défaut",
+    "score": "Score de crédit",
+    "risk_class": "Classe de risque",
+    "decision": "Décision",
+    "recommendation": "Recommandation",
+    "factors": "Facteurs contributifs",
+    "explanation": "Explication détaillée"
+  },
+  "risk_classes": {
+    "very_low": "Très Faible",
+    "low": "Faible", 
+    "medium": "Moyen",
+    "high": "Élevé",
+    "very_high": "Très Élevé"
+  },
+  "decisions": {
+    "approved": "Approuvé",
+    "rejected": "Rejeté",
+    "review": "À examiner",
+    "conditional": "Conditionnel"
+  },
+  "messages": {
+    "loading": "Chargement en cours...",
+    "processing": "Traitement en cours...",
+    "success": "Opération réussie",
+    "error": "Une erreur s'est produite",
+    "invalid_input": "Données d'entrée invalides",
+    "model_not_loaded": "Modèle non chargé",
+    "prediction_failed": "Échec de la prédiction"
+  },
+  "validation": {
+    "required": "Ce champ est obligatoire",
+    "invalid_age": "Âge invalide (18-80 ans)",
+    "invalid_income": "Revenus invalides",
+    "invalid_amount": "Montant invalide",
+    "out_of_range": "Valeur hors limite"
+  },
+  "reports": {
+    "title": "Rapport d'évaluation de crédit",
+    "executive_summary": "Résumé exécutif",
+    "detailed_analysis": "Analyse détaillée",
+    "technical_justification": "Justification technique",
+    "business_recommendations": "Recommandations métier",
+    "risk_assessment": "Évaluation des risques",
+    "model_explanation": "Explication du modèle"
+  },
+  "analytics": {
+    "performance": "Performance du modèle",
+    "drift_detection": "Détection de dérive",
+    "feature_importance": "Importance des variables",
+    "model_metrics": "Métriques du modèle",
+    "data_quality": "Qualité des données",
+    "monitoring": "Surveillance"
+  },
+  "ml_workflow": {
+    "data_loading": "Chargement des données",
+    "data_cleaning": "Nettoyage des données", 
+    "eda": "Analyse exploratoire des données",
+    "feature_engineering": "Ingénierie des caractéristiques",
+    "feature_transformation": "Transformation des variables",
+    "model_training": "Entraînement du modèle",
+    "model_evaluation": "Évaluation du modèle",
+    "model_deployment": "Déploiement du modèle"
+  },
+  "buttons": {
+    "submit": "Soumettre",
+    "reset": "Réinitialiser",
+    "calculate": "Calculer",
+    "export": "Exporter",
+    "download": "Télécharger",
+    "save": "Sauvegarder",
+    "load": "Charger",
+    "train": "Entraîner",
+    "predict": "Prédire"
+  }
+} 

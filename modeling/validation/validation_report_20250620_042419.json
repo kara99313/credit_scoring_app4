@@ -1,0 +1,77 @@
+{
+  "validation_summary": {
+    "timestamp": "20250620_042419",
+    "validation_passed": false,
+    "validation_method": "Conceptual validation based on training metrics"
+  },
+  "base_performance": {
+    "auc_roc": 0.806,
+    "ks_statistic": 0.5024,
+    "gini_coefficient": 0.6119
+  },
+  "temporal_stability": {
+    "auc_decline": 0.03514366462262719,
+    "stability_assessment": "Stable",
+    "period_results": [
+      {
+        "period": 1,
+        "auc_roc": 0.8159342830602248,
+        "ks_statistic": 0.5058792554973394,
+        "stability_score": "Stable"
+      },
+      {
+        "period": 2,
+        "auc_roc": 0.8032347139765763,
+        "ks_statistic": 0.4980055226654773,
+        "stability_score": "Stable"
+      },
+      {
+        "period": 3,
+        "auc_roc": 0.8189537707620139,
+        "ks_statistic": 0.5077513378724486,
+        "stability_score": "Stable"
+      },
+      {
+        "period": 4,
+        "auc_roc": 0.8364605971281606,
+        "ks_statistic": 0.5186055702194595,
+        "stability_score": "Stable"
+      },
+      {
+        "period": 5,
+        "auc_roc": 0.8013169325055334,
+        "ks_statistic": 0.4968164981534307,
+        "stability_score": "Stable"
+      }
+    ]
+  },
+  "stress_tests": {
+    "normal": {
+      "auc_roc": 0.806,
+      "degradation": 0.0,
+      "description": "Conditions normales"
+    },
+    "recession": {
+      "auc_roc": 0.70928,
+      "degradation": 0.09672000000000003,
+      "description": "Récession (-12% performance)"
+    },
+    "crisis": {
+      "auc_roc": 0.66092,
+      "degradation": 0.1450800000000001,
+      "description": "Crise financière (-18% performance)"
+    }
+  },
+  "regulatory_compliance": {
+    "AUC minimum (≥0.75)": true,
+    "KS minimum (≥0.30)": true,
+    "Gini minimum (≥0.40)": true,
+    "Stabilité temporelle (≤0.10)": "True",
+    "Résistance stress (≥0.70)": false
+  },
+  "final_assessment": {
+    "production_ready": false,
+    "risk_level": "Medium",
+    "recommendation": "Requires improvement"
+  }
+}

@@ -1,0 +1,64 @@
+================================================================================
+RAPPORT D'ANALYSE EXPLORATOIRE DES DONNÉES (EDA)
+SYSTÈME DE CRÉDIT SCORING
+================================================================================
+Date de génération : 2025-06-18 23:02:53
+Nombre total de clients : 1000
+Nombre de variables : 21
+
+📋 RÉSUMÉ EXÉCUTIF
+----------------------------------------
+• Distribution de la cible : {'credit bien rembourse': np.int64(700), 'credit avec impaye': np.int64(300)}
+• Pourcentage de bons payeurs : 70.0%
+• Variables numériques : 3
+• Variables catégorielles : 18
+
+📊 UNIVARIATE
+----------------------------------------
+INTERPRÉTATIONS :
+• duree: Crédits à moyen terme (moyenne 20 mois)
+• montant: Montants de crédit moyens (moyenne 3047€)
+• age: Population d'âge moyen (moyenne 35 ans)
+• historique: Modalité dominante: 'credits deja rembourses jusqu'a maintenant' (53.0%)
+• objet: Modalité dominante: 'appareils menagers' (28.0%)
+• epargne: Modalité dominante: 'inferieur a 100' (60.3%)
+• anciennete_emploi: Modalité dominante: 'compris entre 1 et 4 ans' (33.9%)
+• taux_endettement: Modalité dominante: 'superieur a 35%' (47.6%)
+• statut: Modalité dominante: 'celibataire' (54.8%)
+
+📊 TARGET_ANALYSIS
+----------------------------------------
+
+📊 BIVARIATE
+----------------------------------------
+INTERPRÉTATIONS :
+• duree_vs_target: Forte différence entre groupes (23% d'écart) - Variable discriminante
+• montant_vs_target: Différence modérée entre groupes (19% d'écart)
+• age_vs_target: Faible différence entre groupes (7% d'écart)
+• historique_vs_target: Forte association avec la cible (écart moyen 36%)
+• objet_vs_target: Forte association avec la cible (écart moyen 38%)
+• statut_vs_target: Forte association avec la cible (écart moyen 36%)
+• emploi_vs_target: Forte association avec la cible (écart moyen 38%)
+
+📊 CORRELATION
+----------------------------------------
+INTERPRÉTATIONS :
+• duree_vs_montant: Corrélation 0.639 entre duree et montant
+
+📊 STATISTICAL_TESTS
+----------------------------------------
+INTERPRÉTATIONS :
+• chi2_historique: Association SIGNIFICATIVE avec la cible (p=0.0000)
+• chi2_objet: Association SIGNIFICATIVE avec la cible (p=0.0001)
+• chi2_statut: Association SIGNIFICATIVE avec la cible (p=0.0222)
+• ttest_duree: Différence SIGNIFICATIVE entre groupes (p=0.0000)
+• ttest_montant: Différence SIGNIFICATIVE entre groupes (p=0.0001)
+• ttest_age: Différence SIGNIFICATIVE entre groupes (p=0.0024)
+
+🎯 RECOMMANDATIONS POUR LA MODÉLISATION
+----------------------------------------
+• Attention aux variables fortement corrélées - risque de multicolinéarité
+• Variables les plus discriminantes : historique, objet, statut, duree, montant, age
+• Effectuer un feature engineering sur les variables significatives
+• Tester plusieurs algorithmes : Régression Logistique, Random Forest, XGBoost
+• Utiliser une validation croisée stratifiée

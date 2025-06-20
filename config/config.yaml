@@ -1,0 +1,402 @@
+# Credit Scoring Project Configuration
+
+project:
+  name: "Credit Scoring System"
+  version: "1.0.0"
+  description: "Machine Learning system for credit risk assessment"
+
+# Multilingual Configuration
+localization:
+  default_language: "fr"
+  supported_languages: ["fr", "en", "es", "de"]
+  translations_path: "locales/"
+  date_format:
+    fr: "%d/%m/%Y"
+    en: "%m/%d/%Y"
+    es: "%d/%m/%Y"
+    de: "%d.%m.%Y"
+  number_format:
+    fr: "european"  # 1 234,56
+    en: "american"  # 1,234.56
+    es: "european"
+    de: "german"    # 1.234,56
+
+# Data Configuration
+data:
+  raw_data_path: "data/raw/"
+  processed_data_path: "data/processed/"
+  external_data_path: "data/external/"
+  target_column: "default"
+  
+  # Data validation
+  max_missing_percentage: 0.3
+  outlier_detection:
+    method: "iqr"
+    multiplier: 1.5
+  
+  # Data loading configuration
+  loading:
+    chunk_size: 10000
+    encoding: "utf-8"
+    separator: ","
+    decimal: "."
+    date_parser: "auto"
+    
+  # Data quality checks
+  quality_checks:
+    min_rows: 1000
+    max_duplicates_pct: 0.05
+    required_columns: ["age", "income", "credit_history"]
+    data_types_validation: true
+
+# Detailed ML Workflow Configuration
+ml_workflow:
+  
+  # 1. Data Loading & Initial Validation
+  data_loading:
+    validate_schema: true
+    check_file_integrity: true
+    log_data_summary: true
+    
+  # 2. Data Cleaning
+  data_cleaning:
+    remove_duplicates: true
+    handle_missing_values:
+      strategy: "mixed"  # drop, fill, interpolate, mixed
+      numeric_fill: "median"
+      categorical_fill: "mode"
+      drop_threshold: 0.7  # Drop columns with >70% missing
+    
+    outlier_treatment:
+      method: "cap"  # cap, remove, transform
+      cap_method: "iqr"  # iqr, zscore, percentile
+      percentile_range: [0.01, 0.99]
+    
+    data_types:
+      auto_convert: true
+      force_conversions:
+        numerical: ["age", "income", "credit_score"]
+        categorical: ["education", "employment_type"]
+        
+  # 3. Exploratory Data Analysis (EDA)
+  eda:
+    generate_report: true
+    visualizations:
+      - "distribution_plots"
+      - "correlation_matrix"
+      - "missing_data_heatmap"
+      - "target_analysis"
+      - "categorical_analysis"
+      - "numerical_analysis"
+    
+    statistical_tests:
+      - "normality_tests"
+      - "correlation_tests"
+      - "independence_tests"
+    
+    export_formats: ["html", "pdf"]
+    
+  # 4. Feature Engineering
+  feature_engineering:
+    # Business logic features
+    business_features:
+      debt_to_income_ratio: true
+      credit_utilization_ratio: true
+      payment_history_score: true
+      account_diversity_index: true
+      recent_inquiries_count: true
+      
+    # Interaction features
+    interaction_features:
+      age_income: true
+      education_employment: true
+      credit_score_income: true
+      
+    # Binning features
+    binning:
+      age_groups: [18, 25, 35, 45, 55, 65, 100]
+      income_brackets: [0, 25000, 50000, 75000, 100000, 999999]
+      
+    # Time-based features
+    temporal_features:
+      account_age_months: true
+      time_since_last_payment: true
+      seasonal_indicators: true
+      
+  # 5. Feature Transformation
+  feature_transformation:
+    # Encoding strategies
+    categorical_encoding:
+      method: "mixed"  # one_hot, label, target, mixed
+      high_cardinality_threshold: 10
+      rare_category_threshold: 0.01
+      
+    # Scaling strategies  
+    numerical_scaling:
+      method: "robust"  # standard, minmax, robust, quantile
+      handle_outliers: true
+      
+    # Feature selection
+    feature_selection:
+      methods: ["variance", "correlation", "statistical", "model_based"]
+      variance_threshold: 0.01
+      correlation_threshold: 0.95
+      statistical_tests: ["chi2", "f_classif"]
+      model_based_selector: "lasso"
+      k_best: 30
+      
+  # 6. Data Splitting & Sampling
+  data_splitting:
+    strategy: "stratified"
+    test_size: 0.2
+    validation_size: 0.2
+    random_state: 42
+    
+    # Imbalance handling
+    imbalance_handling:
+      method: "smote"  # smote, adasyn, random_oversample, random_undersample
+      sampling_strategy: "auto"
+      k_neighbors: 5
+
+# Feature Engineering (detailed)
+features:
+  categorical_encoding:
+    method: "mixed"
+    one_hot_threshold: 10
+    target_encoding_smoothing: 1.0
+    drop_first: true
+    handle_unknown: "ignore"
+  
+  numerical_scaling:
+    method: "robust"  # standard, minmax, robust
+  
+  feature_selection:
+    method: "mixed"  # statistical, model_based, univariate, mixed
+    k_best: 30
+    correlation_threshold: 0.95
+    
+  imbalance_handling:
+    method: "smote"
+    sampling_strategy: "auto"
+
+# Model Configuration (enhanced)
+model:
+  algorithm: "logistic_regression"
+  
+  hyperparameters:
+    C: [0.001, 0.01, 0.1, 1, 10, 100]
+    penalty: ["l1", "l2", "elasticnet"]
+    solver: ["liblinear", "saga", "lbfgs"]
+    max_iter: [1000, 2000, 5000]
+    class_weight: ["balanced", null]
+    
+  hyperparameter_tuning:
+    method: "grid_search"  # grid_search, random_search, bayesian
+    cv_folds: 5
+    scoring: "roc_auc"
+    n_jobs: -1
+    
+  ensemble_methods:
+    enabled: false
+    methods: ["voting", "stacking", "bagging"]
+    
+  calibration:
+    enabled: true
+    method: "platt"  # platt, isotonic
+
+# Model Evaluation (enhanced)
+evaluation:
+  test_size: 0.2
+  validation_size: 0.2
+  random_state: 42
+  stratify: true
+  
+  metrics:
+    - "roc_auc"
+    - "precision"
+    - "recall"
+    - "f1"
+    - "accuracy"
+    - "ks_statistic"
+    - "gini_coefficient"
+    - "brier_score"
+    - "log_loss"
+    
+  thresholds:
+    default_threshold: 0.5
+    optimal_metric: "f1"
+    
+  cross_validation:
+    enabled: true
+    cv_type: "stratified_kfold"
+    n_splits: 5
+    
+  # Model interpretation
+  explainability:
+    global_explanations: ["feature_importance", "partial_dependence"]
+    local_explanations: ["shap", "lime"]
+    generate_reports: true
+
+# Scoring Configuration
+scoring:
+  score_range:
+    min: 300
+    max: 850
+  
+  risk_classes:
+    very_low: [750, 850]
+    low: [650, 749]
+    medium: [550, 649]
+    high: [450, 549]
+    very_high: [300, 449]
+    
+  decision_thresholds:
+    auto_approve: 0.1
+    auto_reject: 0.7
+    manual_review: [0.1, 0.7]
+    
+  # Business rules
+  business_rules:
+    minimum_age: 18
+    maximum_age: 80
+    minimum_income: 10000
+    debt_to_income_max: 0.8
+
+# API Configuration
+api:
+  host: "0.0.0.0"
+  port: 8000
+  reload: true
+  debug: false
+  
+  rate_limiting:
+    requests_per_minute: 100
+    
+  authentication:
+    enabled: false
+    secret_key: "your-secret-key-here"
+    
+  cors:
+    enabled: true
+    origins: ["*"]
+    
+  # API versioning
+  versioning:
+    enabled: true
+    default_version: "v1"
+    
+  # Response format
+  response_format:
+    include_metadata: true
+    include_explanations: true
+
+# Streamlit Configuration (enhanced)
+streamlit:
+  port: 8501
+  server_address: "localhost"
+  
+  page_config:
+    page_title: "Credit Scoring System"
+    page_icon: "💳"
+    layout: "wide"
+    initial_sidebar_state: "expanded"
+    
+  # UI Configuration
+  ui:
+    theme: "light"  # light, dark, auto
+    color_scheme: "blue"
+    custom_css: true
+    
+  # Features
+  features:
+    real_time_predictions: true
+    batch_processing: true
+    report_generation: true
+    data_visualization: true
+    model_comparison: true
+
+# MLOps Configuration (enhanced)
+mlops:
+  experiment_tracking:
+    backend: "mlflow"
+    tracking_uri: "http://localhost:5000"
+    experiment_name: "credit_scoring"
+    
+  model_registry:
+    enabled: true
+    model_name: "credit_scoring_model"
+    staging_alias: "staging"
+    production_alias: "production"
+    
+  monitoring:
+    drift_detection:
+      enabled: true
+      reference_data_path: "data/reference/"
+      threshold: 0.1
+      methods: ["psi", "ks_test", "chi2_test"]
+      
+    performance_monitoring:
+      enabled: true
+      metrics_threshold:
+        auc_min: 0.7
+        precision_min: 0.6
+        recall_min: 0.6
+      alert_frequency: "daily"
+      
+    data_quality_monitoring:
+      enabled: true
+      checks: ["missing_values", "outliers", "schema_validation"]
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  
+  handlers:
+    console:
+      enabled: true
+      level: "INFO"
+      
+    file:
+      enabled: true
+      level: "DEBUG"
+      filename: "logs/credit_scoring.log"
+      max_bytes: 10485760  # 10MB
+      backup_count: 5
+
+# Database Configuration (Optional)
+database:
+  enabled: false
+  type: "postgresql"
+  host: "localhost"
+  port: 5432
+  database: "credit_scoring"
+  username: "postgres"
+  password: "password"
+
+# Security
+security:
+  input_validation:
+    enabled: true
+    max_string_length: 100
+    allowed_characters: "alphanumeric_plus_space"
+    
+  data_encryption:
+    enabled: false
+    key_path: "keys/encryption.key"
+
+# Deployment
+deployment:
+  environment: "development"  # development, staging, production
+  
+  docker:
+    api_image: "credit-scoring-api"
+    streamlit_image: "credit-scoring-app"
+    
+  kubernetes:
+    namespace: "credit-scoring"
+    replicas: 2
+    
+  monitoring:
+    health_check_interval: 30
+    metrics_port: 9090 

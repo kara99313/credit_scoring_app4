@@ -1,0 +1,113 @@
+{
+  "metadata": {
+    "date_generation": "2025-06-19T13:37:31.360843",
+    "nb_lignes": 1000,
+    "nb_colonnes": 21,
+    "version": "FINAL_COMPLET"
+  },
+  "qualite_donnees": {
+    "completude": 100.0,
+    "valeurs_manquantes": {
+      "duree": 0,
+      "historique": 0,
+      "objet": 0,
+      "montant": 0,
+      "epargne": 0,
+      "anciennete_emploi": 0,
+      "taux_endettement": 0,
+      "statut": 0,
+      "autres_debiteurs": 0,
+      "domicile": 0,
+      "biens": 0,
+      "age": 0,
+      "credit_exterieur": 0,
+      "logement": 0,
+      "emploi": 0,
+      "nombre_personnes": 0,
+      "telephone": 0,
+      "cible": 0,
+      "compte": 0,
+      "nombre_credit": 0,
+      "travailleur_etranger": 0
+    },
+    "types_variables": {
+      "duree": "int64",
+      "historique": "object",
+      "objet": "object",
+      "montant": "float64",
+      "epargne": "object",
+      "anciennete_emploi": "object",
+      "taux_endettement": "object",
+      "statut": "object",
+      "autres_debiteurs": "object",
+      "domicile": "object",
+      "biens": "object",
+      "age": "float64",
+      "credit_exterieur": "object",
+      "logement": "object",
+      "emploi": "object",
+      "nombre_personnes": "object",
+      "telephone": "object",
+      "cible": "object",
+      "compte": "object",
+      "nombre_credit": "object",
+      "travailleur_etranger": "object"
+    }
+  },
+  "analyses_realisees": {
+    "analyse_univariee": true,
+    "analyse_bivariee": true,
+    "detection_outliers": true,
+    "clustering_clients": true,
+    "segmentation_risques": true,
+    "information_mutuelle": true,
+    "interactions_variables": true,
+    "stabilite_variables": true,
+    "benchmarking": true
+  },
+  "visualisations_generees": {
+    "dashboards": [
+      "dashboard_executif.png",
+      "scorecard_visuelle.png"
+    ],
+    "analyses_avancees": [
+      "performance_segments.png",
+      "heatmap_risques_avancee.png",
+      "stabilite_variables.png",
+      "benchmark_performance.png"
+    ],
+    "concentrations": [
+      "analyse_concentration.png",
+      "profils_risque_client.png"
+    ],
+    "clustering": [
+      "analyse_clustering.png",
+      "analyse_outliers_avancee.png"
+    ],
+    "information": [
+      "information_mutuelle.png",
+      "interactions_variables.png"
+    ],
+    "distributions": [
+      "distributions_numeriques_completes.png",
+      "distributions_categoriques_completes.png"
+    ],
+    "correlations": [
+      "matrice_correlation_complete.png",
+      "pairplot_variables_numeriques.png"
+    ]
+  },
+  "insights_business": {
+    "taux_defaut": 30.0,
+    "qualite_portefeuille": "ACCEPTABLE",
+    "montant_moyen": 3046.5155,
+    "duree_moyenne": 20.307,
+    "age_moyen": 35.4275
+  },
+  "recommandations": {
+    "segmentation": "Développer 4 offres produits selon clusters identifiés",
+    "politique_credit": "Renforcer contrôles Cluster 2 (43% défaut), exploiter Cluster 1 (13% défaut)",
+    "optimisation": "Automatiser décisions profils standards, scoring comportemental",
+    "surveillance": "Monitoring PSI, benchmarking régulier marché"
+  }
+}

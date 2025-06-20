@@ -1,0 +1,15 @@
+{
+  "model_version": "v1.0",
+  "creation_date": "20250620_100440",
+  "source_model": "modeling/models/best_model.pkl",
+  "validation_passed": true,
+  "validation_report": "modeling/validation/validation_report_20250620_100440.json",
+  "performance_summary": {
+    "auc_roc": 0.806,
+    "ks_statistic": 0.5024,
+    "gini_coefficient": 0.6119
+  },
+  "production_ready": true,
+  "deployment_status": "Approved for production",
+  "validation_method": "Conceptual validation"
+}
