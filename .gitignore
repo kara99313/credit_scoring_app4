@@ -1,0 +1,18 @@
+# Ignorer les environnements virtuels
+credit_scoring_env/
+
+# Ignorer les fichiers Python compilés
+__pycache__/
+*.py[cod]
+
+# Ignorer les fichiers de log
+*.log
+
+# Ignorer les fichiers de modèles
+*.pkl
+*.h5
+
+# Autres dossiers temporaires
+.env
+.venv
+.ipynb_checkpoints/
