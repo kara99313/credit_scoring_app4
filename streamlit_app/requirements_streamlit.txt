@@ -1,0 +1,122 @@
+# ====================================================
+# CRÉDIT SCORING DASHBOARD - DÉPENDANCES STREAMLIT
+# ====================================================
+# 
+# Ce fichier contient toutes les dépendances nécessaires
+# pour l'application Streamlit de Credit Scoring
+#
+# Installation: pip install -r requirements_streamlit.txt
+# Version: 1.0.0
+# Date: 20 Juin 2025
+
+# =============================================================================
+# FRAMEWORK PRINCIPAL
+# =============================================================================
+streamlit>=1.28.0                   # Framework UI principal
+streamlit-option-menu>=0.3.6        # Menus de navigation stylés
+streamlit-elements>=0.1.0           # Composants UI avancés
+streamlit-aggrid>=0.3.4             # Tables interactives
+
+# =============================================================================
+# VISUALISATION & GRAPHIQUES
+# =============================================================================
+plotly>=5.17.0                      # Graphiques interactifs
+plotly-express>=0.4.1               # Graphiques express
+matplotlib>=3.7.2                   # Graphiques statiques
+seaborn>=0.12.2                     # Visualisations statistiques
+altair>=5.1.2                       # Graphiques déclaratifs
+
+# =============================================================================
+# MANIPULATION DE DONNÉES
+# =============================================================================
+pandas>=2.1.3                       # Manipulation dataframes
+numpy>=1.24.4                       # Calculs numériques
+openpyxl>=3.1.2                     # Export Excel
+xlsxwriter>=3.1.9                   # Export Excel avancé
+
+# =============================================================================
+# MACHINE LEARNING & IA
+# =============================================================================
+scikit-learn>=1.3.2                 # ML (compatibilité modèle)
+xgboost>=2.0.2                      # Modèle XGBoost
+shap>=0.43.0                        # Explainability AI
+joblib>=1.3.2                       # Chargement modèles
+
+# =============================================================================
+# PERFORMANCE & CACHE
+# =============================================================================
+streamlit-cache>=1.0.0              # Cache optimisé
+redis>=5.0.1                        # Cache externe (optionnel)
+psutil>=5.9.6                       # Monitoring système
+
+# =============================================================================
+# GÉNÉRATION DE RAPPORTS
+# =============================================================================
+fpdf2>=2.7.6                        # Génération PDF
+reportlab>=4.0.7                    # Rapports PDF avancés
+jinja2>=3.1.2                       # Templates
+weasyprint>=60.2                    # HTML vers PDF
+
+# =============================================================================
+# UTILITAIRES & HELPERS
+# =============================================================================
+python-dateutil>=2.8.2              # Manipulation dates
+pytz>=2023.3                        # Gestion fuseaux horaires
+pyyaml>=6.0.1                       # Configuration YAML
+toml>=0.10.2                        # Configuration TOML
+python-dotenv>=1.0.0                # Variables environnement
+
+# =============================================================================
+# VALIDATION & SÉCURITÉ
+# =============================================================================
+pydantic>=2.5.0                     # Validation données
+email-validator>=2.1.0              # Validation emails
+cryptography>=41.0.7                # Chiffrement (optionnel)
+
+# =============================================================================
+# DÉVELOPPEMENT & TESTS
+# =============================================================================
+pytest>=7.4.3                       # Tests unitaires
+pytest-cov>=4.1.0                   # Coverage tests
+black>=23.11.0                      # Formatage code
+flake8>=6.1.0                       # Linting
+mypy>=1.7.1                         # Type checking
+
+# =============================================================================
+# COMMUNICATION & NOTIFICATIONS
+# =============================================================================
+requests>=2.31.0                    # Requêtes HTTP
+smtplib-starttls>=0.0.1            # Envoi emails (optionnel)
+
+# =============================================================================
+# VERSIONS SPÉCIFIQUES POUR COMPATIBILITÉ
+# =============================================================================
+# Ces versions sont testées et validées ensemble
+streamlit-authenticator>=0.2.3      # Authentification (si nécessaire)
+st-annotated-text>=4.0.1           # Texte annoté
+streamlit-card>=0.0.61             # Cartes UI
+streamlit-extras>=0.3.5            # Composants supplémentaires
+
+# =============================================================================
+# NOTES D'INSTALLATION
+# =============================================================================
+#
+# Installation recommandée:
+# 1. Créer un environnement virtuel:
+#    python -m venv streamlit_env
+#    source streamlit_env/bin/activate  # Linux/Mac
+#    streamlit_env\Scripts\activate     # Windows
+#
+# 2. Installer les dépendances:
+#    pip install --upgrade pip
+#    pip install -r requirements_streamlit.txt
+#
+# 3. Lancer l'application:
+#    streamlit run main.py
+#
+# Dépendances système recommandées:
+# - Python 3.9+
+# - RAM: 4GB minimum, 8GB recommandé
+# - Espace disque: 2GB minimum
+#
+# ============================================================================= 
